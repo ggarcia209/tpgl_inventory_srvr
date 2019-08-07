@@ -1,3 +1,4 @@
+// Package model contains components for storing and accessing data offline and in-memory
 package model
 
 import (
