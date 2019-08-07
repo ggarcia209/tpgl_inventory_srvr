@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>List</title>
+</head>
+
+<body>
+    <div>
+        <h1>Items</h1>
+        <table>
+            <tr style='text-align: left'>
+                <th>Items</th>
+                <th>Prices</th>
+            </tr>
+            <tr style='text-align: left'>
+                <th>-----</th>
+                <th>------</th>
+            </tr>
+            {{range $key, $value := .}}
+            <tr>
+                <td>{{$value.Name}}</td>
+                <td>{{$value.Price}}</td>
+            </tr>
+            {{end}}
+        </table>
+        <a href="http://localhost:8000/home">Return</a>
+    </div>
+</body>
+
+</html>
