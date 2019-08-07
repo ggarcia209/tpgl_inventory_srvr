@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome!</title>
+</head>
+
+<body>
+    <h1>Welcome to the Inventory Database!</h1>
+    <div>
+        <h2>Create/Update Database Entry</h2>
+        <p>Price must be numeric or decimal value greater than or equal to 0</p>
+        <form action="/update" method="POST">
+            Name:<input type="text" name="name">
+            Price<input type="text" name="price">
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+    <div>
+        <h2>List (Read) all items in Database</h2>
+        <form action="/list" method="POST">
+            <input type="submit" value="List">
+        </form>
+    </div>
+
+    <div>
+        <h2>List (Read) price of specified item</h2>
+        <p>Returns error if item doesn't exist</p>
+        <form action="/price" method="POST">
+            Name:<input type="text" name="name">
+            <input type="submit" value="Get Price">
+        </form>
+    </div>
+
+    <div>
+        <h2>Delete entry</h2>
+        <p>Returns error if item doesn't exist</p>
+        <form action="/delete" method="POST">
+            Name:<input type="text" name="name">
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+    <div>
+        <p>Database entries are saved offline and will be available the next time server is accessed.</p>
+    </div>
+</body>
+
+</html>
